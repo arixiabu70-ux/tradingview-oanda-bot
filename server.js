@@ -112,12 +112,7 @@ app.post("/webhook", async (req, res) => {
 // 10秒ごとにポジションチェック
 setInterval(checkPositions, 10000);
 
-// PORT を強制的に process.env.PORT にする
-const PORT = process.env.PORT;
-if (!PORT) {
-  console.error("❌ PORT が設定されていません");
-  process.exit(1);
-}
-
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+
 
