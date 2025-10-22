@@ -6,7 +6,7 @@ app.use(express.json());
 
 const OANDA_API_KEY = process.env.OANDA_API_KEY || "YOUR_OANDA_API_KEY";
 const ACCOUNT_ID = process.env.ACCOUNT_ID || "YOUR_OANDA_ACCOUNT_ID";
-const OANDA_URL = "https://api-fxpractice.oanda.com";
+const OANDA_URL = "https://api-fxtrade.oanda.com";
 
 const TRADE_UNITS = 20000; // ロット固定
 
