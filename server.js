@@ -12,6 +12,5 @@ app.post("/webhook", (req, res) => {
   res.status(200).send({ status: "ok", message: "Webhook received" });
 });
 
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`);
-});
+const PORT = process.env.PORT;  // 固定せず環境変数を使う
+app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
